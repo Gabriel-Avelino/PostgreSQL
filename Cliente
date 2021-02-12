@@ -1,0 +1,36 @@
+-- Table: public.cliente
+
+-- DROP TABLE public.cliente;
+
+CREATE TABLE public.cliente
+(
+    codigo numeric(10,0) NOT NULL,
+    nome character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    telefone character varying(20) COLLATE pg_catalog."default",
+    CONSTRAINT cliente_pkey PRIMARY KEY (codigo)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.cliente
+    OWNER to postgres;
+    
+    
+//A seguir há um novo código para adição de coluna
+
+ALTER TABLE public.cliente
+    ADD COLUMN codigo numeric(10,0) NOT NULL;
+    
+    
+//A seguir há um novo código para adição de coluna
+
+ALTER TABLE public.cliente
+    ADD COLUMN nome character varying(100) COLLATE pg_catalog."default" NOT NULL;
+    
+    
+//A seguir há um novo código para adição de coluna
+
+ALTER TABLE public.cliente
+    ADD COLUMN telefone character varying(20) COLLATE pg_catalog."default";
